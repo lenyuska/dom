@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение картинки по URL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="input-section">
+            <h2>Введите URL картинки и нажмите кнопку:</h2>
+            <input type="text" id="imageUrl" placeholder="Введите URL">
+            <button onclick="changeImage()">Показать картинку</button>
+        </div>
+
+        <div class="image-container">
+            <img id="image" src="img/imgg.jpg" alt="Картинка">
+        </div>
+    </div>
+
+    <script>
+        function changeImage() {
+            const imageUrl = document.getElementById("imageUrl").value;
+            const image = document.getElementById("image");
+            if (imageUrl.trim() === "") {
+                image.src = "img/imgg.jpg";  
+            } 
+            else {        
+                image.src = imageUrl;
+            }
+            document.getElementById("imageUrl").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    font-family: monospace;
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color:#FF00FF;
+}

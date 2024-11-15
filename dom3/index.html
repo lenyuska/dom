@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение цветов текста и фона</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h2>Измените цвет текста и фона абзаца</h2>
+
+    <label for="textColor">Цвет текста:</label>
+    <input type="text" id="textColor" placeholder="Введите цвет текста">
+    
+    <label for="bgColor">Цвет фона:</label>
+    <input type="text" id="bgColor" placeholder="Введите цвет фона">
+    
+    <button onclick="changeColors()">Изменить цвета</button>
+
+    <p id="textParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Laudantium excepturi tenetur fugit veritatis ducimus expedita rem fuga architecto nemo dignissimos!<br> Quae aut est dignissimos sit ea fugiat deleniti fugit illum..</p>
+
+    <script>
+        function changeColors() {
+            const textColor = document.getElementById("textColor").value;
+            const bgColor = document.getElementById("bgColor").value;
+            const paragraph = document.getElementById("textParagraph");
+            paragraph.style.color = textColor;
+            paragraph.style.backgroundColor = bgColor;
+        }
+    </script>
+</body>
+</html>
