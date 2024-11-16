@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение рамки таблицы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Измените рамку таблицы</h2>
+    <label for="borderThickness">Толщина:</label>
+    <input type="text" id="borderThickness" placeholder="Введите толщину">
+
+    <label for="borderColor">Цвет:</label>
+    <input type="text" id="borderColor" placeholder="Введите цвет">
+
+    <button onclick="changeTableBorder()">Изменить рамку таблицы</button>
+
+    <table id="myTable" border="1">
+        <tr>
+            <th>Товар</th>
+            <th>Количество</th>
+        </tr>
+        <tr>
+            <td>Телефон</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Наушники</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <script>
+        function changeTableBorder() {
+            const borderThickness = document.getElementById("borderThickness").value;
+            const borderColor = document.getElementById("borderColor").value;
+
+            const table = document.getElementById("myTable");
+
+            table.style.border = `${borderThickness}px solid ${borderColor}`;
+        }
+    </script>
+
+</body>
+</html>
